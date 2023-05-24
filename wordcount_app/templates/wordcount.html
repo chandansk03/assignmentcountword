@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Word Count</title>
+</head>
+<body>
+  <h1>Word Counter</h1>
+  <form method="POST" action="{% url 'wordcount' %}">
+    {% csrf_token %}
+    <label for="url">Enter a URL:</label>
+    <input type="text" name="url" value="{{ url }}">
+    <button type="submit">Count Words</button>
+  </form>
+</body>
+</html>
